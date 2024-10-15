@@ -884,7 +884,7 @@ static const char *dmenucmd[] = {
 };
 static const char *termcmd[]  = { "st", NULL };
 static const char *web[]      = { "firefox", NULL };
-static const char *files[]    = { "dolphin", NULL };
+static const char *files[]    = { "caja", NULL };
 
 /* volume */
 static const char *upvol[]   = { "wpctl", "set-volume", "-l", "1.0", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
