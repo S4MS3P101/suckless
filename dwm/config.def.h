@@ -172,14 +172,14 @@ static const char dmenufont[]            = "cherry:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#95E6CB";
-static char normbgcolor[]                = "#0F1419";
+static char normfgcolor[]                = "#0F1419";
+static char normbgcolor[]                = "#ABAC96";
 static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = "#B8CC52";
 
 static char selfgcolor[]                 = "#bbbbbb";
-static char selbgcolor[]                 = "#95E6CB";
-static char selbordercolor[]             = "#95E6CB";
+static char selbgcolor[]                 = "#ABAC96";
+static char selbordercolor[]             = "#ABAC96";
 static char selfloatcolor[]              = "#B8CC52";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
@@ -189,8 +189,8 @@ static char titlenormfloatcolor[]        = "#B8CC52";
 
 static char titleselfgcolor[]            = "#eeeeee";
 static char titleselbgcolor[]            = "#0F1419";
-static char titleselbordercolor[]        = "#95E6CB";
-static char titleselfloatcolor[]         = "#95E6CB";
+static char titleselbordercolor[]        = "#ABAC96";
+static char titleselfloatcolor[]         = "#ABAC96";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
 static char tagsnormbgcolor[]            = "#0F1419";
@@ -198,9 +198,9 @@ static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#B8CC52";
 
 static char tagsselfgcolor[]             = "#0F1419";
-static char tagsselbgcolor[]             = "#95E6CB";
-static char tagsselbordercolor[]         = "#95E6CB";
-static char tagsselfloatcolor[]          = "#95E6CB";
+static char tagsselbgcolor[]             = "#ABAC96";
+static char tagsselbordercolor[]         = "#ABAC96";
+static char tagsselfloatcolor[]          = "#ABAC96";
 
 static char hidnormfgcolor[]             = "#005577";
 static char hidselfgcolor[]              = "#227799";
@@ -874,7 +874,7 @@ static const char *dmenucmd[] = {
 	#endif // NODMENU_PATCH
 	"-fn", dmenufont,
 	"-nb", titlenormbgcolor,
-	"-nf", normfgcolor,
+	"-nf", normbgcolor,
 	"-sb", selbgcolor,
 	"-sf", tagsselfgcolor,
 	#if BAR_DMENUMATCHTOP_PATCH
@@ -931,6 +931,7 @@ static const Key keys[] = {
 	{ 0,       XF86XK_AudioMute,		   spawn,	   {.v = mutevol } },
 	{ 0,       XF86XK_MonBrightnessUp,         spawn,          {.v = brightnessup } },
 	{ 0,       XF86XK_MonBrightnessDown,       spawn,          {.v = brightnessdown } },
+	{ 0,       XK_Print, 			   spawn, 	   SHCMD("~/.config/scrot/scrot.sh") },
 
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },

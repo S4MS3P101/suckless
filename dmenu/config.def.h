@@ -95,7 +95,7 @@ char *colors[][2] = {
 	[SchemeSel]  = { "#0F1419", "#005577" },
 	[SchemeOut]  = { "#000000", "#00ffff" },
 	#if BORDER_PATCH
-	[SchemeBorder] = { "#000000", "#95E6C8" },
+	[SchemeBorder] = { "#000000", "#ABAC96" },
 	#endif // BORDER_PATCH
 	#if MORECOLOR_PATCH
 	[SchemeMid]  = { "#eeeeee", "#770000" },

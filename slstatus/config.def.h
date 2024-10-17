@@ -65,6 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+	{ run_command, "%s ", ".config/slstatus/sb-wifi.sh", NULL },
 	{ run_command, "%s ", ".config/slstatus/sb-vol.sh", NULL },
 	{ run_command, "%s ", ".config/slstatus/sb-bat.sh", NULL },
 	{ datetime, "%s", "%R" },
