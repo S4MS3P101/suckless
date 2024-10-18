@@ -34,45 +34,45 @@ static const char dmenufont[]            = "cherry:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#0F1419";
+static char normfgcolor[]                = "#0c0c0c";
 static char normbgcolor[]                = "#ABAC96";
 static char normbordercolor[]            = "#444444";
-static char normfloatcolor[]             = "#B8CC52";
+static char normfloatcolor[]             = "#ABAC96";
 
 static char selfgcolor[]                 = "#bbbbbb";
 static char selbgcolor[]                 = "#ABAC96";
 static char selbordercolor[]             = "#ABAC96";
-static char selfloatcolor[]              = "#B8CC52";
+static char selfloatcolor[]              = "#ABAC96";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#0F1419";
+static char titlenormbgcolor[]           = "#0c0c0c";
 static char titlenormbordercolor[]       = "#444444";
-static char titlenormfloatcolor[]        = "#B8CC52";
+static char titlenormfloatcolor[]        = "#ABAC96";
 
 static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#0F1419";
+static char titleselbgcolor[]            = "#0c0c0c";
 static char titleselbordercolor[]        = "#ABAC96";
 static char titleselfloatcolor[]         = "#ABAC96";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#0F1419";
+static char tagsnormbgcolor[]            = "#0c0c0c";
 static char tagsnormbordercolor[]        = "#444444";
-static char tagsnormfloatcolor[]         = "#B8CC52";
+static char tagsnormfloatcolor[]         = "#ABAC96";
 
-static char tagsselfgcolor[]             = "#0F1419";
+static char tagsselfgcolor[]             = "#0c0c0c";
 static char tagsselbgcolor[]             = "#ABAC96";
 static char tagsselbordercolor[]         = "#ABAC96";
 static char tagsselfloatcolor[]          = "#ABAC96";
 
-static char hidnormfgcolor[]             = "#005577";
-static char hidselfgcolor[]              = "#227799";
-static char hidnormbgcolor[]             = "#222222";
-static char hidselbgcolor[]              = "#222222";
+static char hidnormfgcolor[]             = "#ABAC96";
+static char hidselfgcolor[]              = "#ABAC96";
+static char hidnormbgcolor[]             = "#444444";
+static char hidselbgcolor[]              = "#444444";
 
 static char urgfgcolor[]                 = "#bbbbbb";
 static char urgbgcolor[]                 = "#222222";
 static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#B8CC52";
+static char urgfloatcolor[]              = "#ABAC96";
 
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
@@ -167,7 +167,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "firefox", .tags = 1 << 1)
-	RULE(.class = "qbittorrent", .tags = 1 << 2)
+	RULE(.class = "firefox", .title = "About Mozilla Firefox", .isfloating = 1 )
 	RULE(.class = "st-256color", .noswallow = 0, .isterminal = 1 )
 };
 
