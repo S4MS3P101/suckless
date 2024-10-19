@@ -57,3 +57,8 @@ URxvt.keysym.C-question: resize-font:show
 !! Other
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+
+!! sxiv
+Sxiv.foreground: #ABAC96
+Sxiv.background: #0c0c0c
+Sxiv.font: cherry-10
