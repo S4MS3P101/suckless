@@ -32,7 +32,7 @@ static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const char *fonts[]               = { "cherry:size=10" };
 static const char dmenufont[]            = "cherry:size=10";
 
-static char c000000[]                    = "#000000"; // placeholder value
+static char c000000[]                    = "#0c0c0c"; // placeholder value
 
 static char normfgcolor[]                = "#ABAC96";
 static char normbgcolor[]                = "#0c0c0c";
@@ -224,6 +224,7 @@ static const char *dmenucmd[] = {
 	"-sf", tagsselfgcolor,
 	NULL
 };
+
 static const char *termcmd[]  = { "st", NULL };
 static const char *web[]      = { "firefox", NULL };
 static const char *files[]    = { "caja", NULL };
@@ -240,21 +241,22 @@ static const char *brightnessdown[] = { "brightnessctl", "set", "5%-", NULL };
 
 #include <X11/XF86keysym.h>
 static const Key keys[] = {
+
 	/* modifier                     key            function                argument */
-        { MODKEY,                       XK_w,      spawn,          {.v = web } },
-        { MODKEY,                       XK_e,      spawn,          {.v = files } },
+        { MODKEY,                       XK_w,          spawn,                  {.v = web } },
+        { MODKEY,                       XK_e,          spawn,                  {.v = files } },
+	{ MODKEY|ShiftMask,             XK_l,          spawn,                  {.v = lock } },
 
 	/* Volume and Brightness control */
-	{ 0,       XF86XK_AudioRaiseVolume,	   spawn,      	   {.v = upvol } },
-	{ 0,       XF86XK_AudioLowerVolume,	   spawn,	   {.v = downvol } },
-	{ 0,       XF86XK_AudioMute,		   spawn,	   {.v = mutevol } },
-	{ 0,       XF86XK_MonBrightnessUp,         spawn,          {.v = brightnessup } },
-	{ 0,       XF86XK_MonBrightnessDown,       spawn,          {.v = brightnessdown } },
-	{ 0,       XK_Print, 			   spawn, 	   SHCMD("~/.config/scrot/scrot.sh") },
+	{ 0,       XF86XK_AudioRaiseVolume,	       spawn,      	       {.v = upvol } },
+	{ 0,       XF86XK_AudioLowerVolume,	       spawn,	 	       {.v = downvol } },
+	{ 0,       XF86XK_AudioMute,		       spawn,	               {.v = mutevol } },
+	{ 0,       XF86XK_MonBrightnessUp,             spawn,                  {.v = brightnessup } },
+	{ 0,       XF86XK_MonBrightnessDown,  	       spawn,                  {.v = brightnessdown } },
+	{ 0,       XK_Print, 			       spawn, 	               SHCMD("~/.config/scrot/scrot.sh") },
 
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_l,          spawn,                  {.v = lock } },
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
 	{ MODKEY,                       XK_j,          focusstack,             {.i = +1 } },
 	{ MODKEY,                       XK_k,          focusstack,             {.i = -1 } },
@@ -316,4 +318,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,              Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,              Button3,        toggletag,      {0} },
 };
-
