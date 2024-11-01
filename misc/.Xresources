@@ -1,0 +1,64 @@
+!! GruvBox Colorscheme
+
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+
+!! URxvt Appearance
+URxvt.font: xft:JetBrainsMono Nerd Font:size=10
+URxvt.scrollBar: false
+URxvt.internalBorder: 5
+URxvt.cursorBlink: true
+URxvt.letterSpace: -1
+URxvt.depth: 32
+URxvt.background: [85]#282828
+URxvt.geometry: 90x24
+
+!! Extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,resize-font
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+URxvt.keysym.C-+: resize-font:smaller
+URxvt.keysym.C--: resize-font:bigger
+URxvt.keysym.C-equal: resize-font:reset
+URxvt.keysym.C-question: resize-font:show
+
+!! Other
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!! sxiv
+Sxiv.foreground: #ABAC96
+Sxiv.background: #0c0c0c
+Sxiv.font: cherry-10
