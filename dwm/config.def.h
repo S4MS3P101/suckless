@@ -22,14 +22,14 @@ static const int sidepad                 = 10;  /* horizontal padding of bar */
 static const int statusmon               = 'A';
 static const int horizpadbar             = 10;  /* horizontal padding for statusbar */
 static const int vertpadbar              = 10;  /* vertical padding for statusbar */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const unsigned int systrayspacing = 5;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 
 /* Indicators: see patch/bar_indicators.h for options */
 static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
-static const char *fonts[]               = { "cherry:size=10", "JetBrains Mono Nerd Font:size=9" };
+static const char *fonts[]               = { "cherry:size=10", "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]            = "cherry:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
@@ -169,6 +169,7 @@ static const Rule rules[] = {
 	RULE(.class = "firefox", .title = "About Mozilla Firefox", .isfloating = 1)
 	RULE(.class = "mpv", .isfloating = 1)
 	RULE(.class = "sxiv", .isfloating = 1)
+	RULE(.class = "qBittorrent", .isfloating = 1)
 	RULE(.class = "st-256color", .noswallow = 0, .isterminal = 1)
 };
 

@@ -57,6 +57,8 @@ URxvt.keysym.C-question: resize-font:show
 !! Other
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+Xcursor.theme: Bibata-Modern-Classic
+!Xcursor.size: 20
 
 !! sxiv
 Sxiv.foreground: #ABAC96

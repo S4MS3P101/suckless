@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BATTERY_PATH="/sys/class/power_supply/BAT0"
+AC_PATH="/sys/class/power_supply/AC0/online"  # Common AC power path
 
 if [ ! -d "$BATTERY_PATH" ]; then
     echo "n/a"
@@ -10,7 +11,14 @@ fi
 battery_level=$(cat "$BATTERY_PATH/capacity" 2>/dev/null)
 charging_status=$(cat "$BATTERY_PATH/status" 2>/dev/null)
 
-if [[ "$charging_status" == "Charging" ]]; then
+# Check if AC power is connected
+ac_connected=0
+if [ -f "$AC_PATH" ]; then
+    ac_connected=$(cat "$AC_PATH" 2>/dev/null)
+fi
+
+# Modified condition: Show charging icons if either charging or AC connected
+if [[ "$charging_status" == "Charging" ]] || [[ "$ac_connected" -eq 1 ]]; then
     if [ "$battery_level" -eq 100 ]; then
         icon="󰂅"
     elif [ "$battery_level" -ge 90 ]; then
