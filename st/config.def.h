@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "cherry:pixelsize=14:antialias=true:autohint=true";
+static char *font = "cherry:size=11:antialias=true:autohint=true";
 static int borderpx = 20;
 
 /*
@@ -94,35 +94,35 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.65;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
   /* 8 normal colors */
   [0] = "#000000", /* black   */
-  [1] = "#6F695C", /* red     */
-  [2] = "#887863", /* green   */
-  [3] = "#78876F", /* yellow  */
-  [4] = "#9B916F", /* blue    */
-  [5] = "#C9AD73", /* magenta */
-  [6] = "#ABAC96", /* cyan    */
-  [7] = "#dddbd1", /* white   */
+  [1] = "#E88C5B", /* red     */
+  [2] = "#6A7D82", /* green   */
+  [3] = "#76868A", /* yellow  */
+  [4] = "#A7A195", /* blue    */
+  [5] = "#C8B6A6", /* magenta */
+  [6] = "#D0C7BA", /* cyan    */
+  [7] = "#e3e0dd", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#9a9992", /* black   */
-  [9]  = "#6F695C", /* red     */
-  [10] = "#887863", /* green   */
-  [11] = "#78876F", /* yellow  */
-  [12] = "#9B916F", /* blue    */
-  [13] = "#C9AD73", /* magenta */
-  [14] = "#ABAC96", /* cyan    */
-  [15] = "#dddbd1", /* white   */
+  [8]  = "#9e9c9a",  /* black   */
+  [9]  = "#E88C5B",  /* red     */
+  [10] = "#6A7D82", /* green   */
+  [11] = "#76868A", /* yellow  */
+  [12] = "#A7A195", /* blue    */
+  [13] = "#C8B6A6", /* magenta */
+  [14] = "#D0C7BA", /* cyan    */
+  [15] = "#e3e0dd", /* white   */
 
   /* special colors */
   [256] = "#000000", /* background */
-  [257] = "#dddbd1", /* foreground */
-  [258] = "#dddbd1", /* cursor */
+  [257] = "#e3e0dd", /* foreground */
+  [258] = "#e3e0dd",     /* cursor */
 };
 
 /* Default colors (colorname index)

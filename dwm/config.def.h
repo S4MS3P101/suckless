@@ -29,19 +29,19 @@ static const int showsystray             = 1;   /* 0 means no systray */
 static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
-static const char *fonts[]               = { "cherry:size=10", "JetBrainsMono Nerd Font:size=10" };
-static const char dmenufont[]            = "cherry:size=10";
+static const char *fonts[]               = { "cherry:size=11", "JetBrainsMono Nerd Font:size=10" };
+static const char dmenufont[]            = "cherry:size=11";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#ABAC96";
+static char normfgcolor[]                = "#eeeeee";
 static char normbgcolor[]                = "#000000";
 static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = "#444444";
 
 static char selfgcolor[]                 = "#000000";
-static char selbgcolor[]                 = "#ABAC96";
-static char selbordercolor[]             = "#ABAC96";
+static char selbgcolor[]                 = "#d92339";
+static char selbordercolor[]             = "#eeeeee";
 static char selfloatcolor[]              = "#ABAC96";
 
 static char titlenormfgcolor[]           = "#eeeeee";
@@ -60,9 +60,9 @@ static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#444444";
 
 static char tagsselfgcolor[]             = "#000000";
-static char tagsselbgcolor[]             = "#ABAC96";
-static char tagsselbordercolor[]         = "#ABAC96";
-static char tagsselfloatcolor[]          = "#ABAC96";
+static char tagsselbgcolor[]             = "#d92339";
+static char tagsselbordercolor[]         = "#d92339";
+static char tagsselfloatcolor[]          = "#d92339";
 
 static char hidnormfgcolor[]             = "#ABAC96";
 static char hidselfgcolor[]              = "#000000";
@@ -74,7 +74,7 @@ static char urgbgcolor[]                 = "#000000";
 static char urgbordercolor[]             = "#ff0000";
 static char urgfloatcolor[]              = "#ABAC96";
 
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
@@ -131,7 +131,7 @@ static char *colors[][ColCount] = {
  */
 static char *tagicons[][NUMTAGS] =
 {
-	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5" },
+	[DEFAULT_TAGS]        = { "一", "二", "三", "四", "五" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>" },
 };
