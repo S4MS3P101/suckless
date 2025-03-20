@@ -1,0 +1,14 @@
+#!/bin/bash
+
+bluetoothctl show | grep -q "Powered: yes"
+if [ $? -eq 0 ]; then
+    bluetoothctl info | grep -q "Connected: yes"
+    if [ $? -eq 0 ]; then
+        echo ""
+    else
+        echo ""
+    fi
+else
+    # Bluetooth is powered off
+    echo " Off"
+fi

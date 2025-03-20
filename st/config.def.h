@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "cherry:size=11:antialias=true:autohint=true";
+static char *font = "cherry:size=10:antialias=true:autohint=true";
 static int borderpx = 20;
 
 /*
@@ -110,8 +110,8 @@ static const char *colorname[] = {
   [7] = "#e3e0dd", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#9e9c9a",  /* black   */
-  [9]  = "#E88C5B",  /* red     */
+  [8]  = "#9e9c9a", /* black   */
+  [9]  = "#E88C5B", /* red     */
   [10] = "#6A7D82", /* green   */
   [11] = "#76868A", /* yellow  */
   [12] = "#A7A195", /* blue    */
@@ -122,7 +122,7 @@ static const char *colorname[] = {
   /* special colors */
   [256] = "#000000", /* background */
   [257] = "#e3e0dd", /* foreground */
-  [258] = "#e3e0dd",     /* cursor */
+  [258] = "#e3e0dd", /* cursor */
 };
 
 /* Default colors (colorname index)
